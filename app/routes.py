@@ -4,6 +4,11 @@ from app.controllers.car_controller import create_car, get_cars
 
 bp = Blueprint('bp', __name__)
 
+
+@bp.route('/', methods=['GET'])
+def welcome():
+    return "Welcome"
+
 @bp.route('/users', methods=['POST'])
 def add_user():
     return create_user()
